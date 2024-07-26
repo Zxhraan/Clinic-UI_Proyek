@@ -1,0 +1,698 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif,Arial;
+    scroll-behavior: smooth;
+}
+header{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    width: 80%;
+    margin-inline: auto;
+    
+    
+}
+
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar.scrolling-active {
+    background-color: white;
+    padding: 30px 0;
+    z-index: 1000;
+    color: black;
+    
+  }
+  
+  .navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .box-navbar .menu {
+    display: flex;
+    column-gap: 50px;
+  }
+  
+  .navbar .box-navbar .menu li {
+    list-style-type: none;
+  }
+  
+  .navbar .box-navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .navbar.scrolling-active .box-navbar .menu li a {
+    color: black;
+  }
+  
+  .navbar .box-navbar .menu .active a {
+    background-color: green;
+  }
+  
+  .navbar .box-navbar .menu li a:hover {
+    background-color: green;
+  }
+.logo{
+    display: flex;
+    align-items: center;
+}
+.ui img{
+    width: 30%;
+}
+
+.menu-bar {
+    display: none;
+    font-size: 24px;
+    display: none;
+}
+
+.hero {
+    width: 100%;
+    min-height: 200vh;
+    display: flex;
+    align-items: center;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+    
+}
+
+
+.hero .box-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: -50%;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+
+
+.hero .box-hero .box:nth-child(2) img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero .box-hero .box:nth-child(2) img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.5);
+}
+
+
+@media screen and (max-width: 990px) {
+    .menu-bar {
+        display: block;
+    }
+
+
+    .navbar .box-navbar .menu {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        top: 70px;
+        right: 50%;
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        opacity: 0;
+        transition: all .3s;
+        background: linear-gradient((rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)));
+
+    }
+}
+
+.navbar .box-navbar .menu.menu-active{
+    top: 80px;
+    opacity: 1;
+    border-top: 1px solid white;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: white;
+    background: black;
+    border-radius: 50%;
+}
+.social a .bx:hover {
+    background: green ;
+}
+.links{
+    margin: 1rem 0 1rem
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: green;
+    padding: 1rem;
+}
+.links a:hover{
+    color: green;
+}
+.contact p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*list Layanan*/
+
+.sidebarr {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.sidebarrr {
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.sidebarrr ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebarrr ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.sidebarrr ul li.active, .sidebar ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.contentt {
+    flex: 1;
+    padding: 20px;
+}
+
+.headerr {
+    margin-bottom: 20px;
+    
+}
+
+.headerr h1 {
+    margin-top: 0;
+}
+
+.headerr p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contentt-section {
+    display: none;
+}
+
+.contentt-section.active {
+    display: block;
+}
+
+
+/* login */
+
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/*cerita bersama kami p2*/
+
+
+
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    padding: 0 50px;
+    background-image: url("../imgrs/kuliah-kebangsaan-ganjar-pranowo-di-ui_20230918_162107.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative; /* Untuk efek overlay */
+    overflow: hidden; /* Untuk efek overlay */
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.about:hover {
+    transform: scale(1.05); /* Efek scaling saat dihover */
+}
+
+.content {
+    max-width: 50%;
+    padding: 20px; /* Padding konten */
+    background: rgba(0, 0, 0, 0.8); /* Latar belakang dengan transparansi */
+    color: white;
+    border-radius: 5px;
+    position: absolute; /* Menetapkan posisi absolute untuk overlay */
+    bottom: 0; /* Menempatkan di bagian bawah */
+    left: 50px; /* Jarak dari kiri */
+    transform: translateY(100%); /* Menyembunyikan konten awalnya */
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.about:hover .content {
+    transform: translateY(0); /* Muncul saat dihover */
+}
+
+.content h1,
+.content h2 {
+    margin: 10px 0;
+    padding: 10px; /* Padding teks */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); /* Efek gradient */
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-info {
+    color: white;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: white;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: green;
+}
+
+.image-container {
+    max-width: 50%;
+    overflow: hidden; /* Untuk efek overlay */
+    position: relative; /* Untuk efek overlay */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Efek scaling saat dihover */
+}
+
+
+
+/*Buat Pesanan  p3*/
+
+
+
+.pemesanan {
+    display: flex;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* Untuk efek overlay */
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.pemesanan:hover {
+    transform: translateY(-5px); /* Efek naik sedikit saat dihover */
+}
+
+.left {
+    padding: 40px;
+    flex: 1;
+}
+
+.left h2 {
+    color: #aaa;
+    margin: 0;
+}
+
+.left h1 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.left p {
+    color: #666;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative; /* Untuk efek overlay */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease; /* Animasi transisi */
+    overflow: hidden; /* Untuk efek overlay */
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efek scaling saat dihover */
+}
+
+.card:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Efek overlay */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    
+}
+
+.card-content {
+    color: #fff;
+    text-align: center;
+    
+}
+
+.card:hover .card-content {
+    opacity: 1; /* Muncul saat dihover */
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-content p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font: arial;
+}
+
+.pemesanann {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pemesanann:hover {
+    background-color: #004080; /* Warna latar tombol saat dihover */
+}
+
+.pemesanan:hover .pemesanann {
+    opacity: 1; /* Muncul saat dihover */
+}
+
+
+/*about p4*/
+
+.sejarah {
+    display: flex;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* Untuk efek overlay */
+    transition: transform 0.3s ease; /* Animasi transisi */
+    
+}
+
+.sejarah:hover {
+    transform: translateY(-5px); /* Efek naik sedikit saat dihover */
+}
+
+.kiri {
+    padding: 40px;
+    flex: 1;
+}
+
+.kiri h2 {
+    color: #aaa;
+    margin: 0;
+}
+
+.kiri h1 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.kiri p {
+    color: #666;
+}
+
+.kanan {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+
+.kartu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kartu:hover{
+    transform: scale(1.02);
+}
+.kartu:hover .belebih {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.kartu img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.belebih {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    
+}
+
+.kartu-content {
+    color: #fff;
+    text-align: center;
+}
+
+.kartu-content h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.kartu-content p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font: arial;
+}
+.belija{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.belija:hover {
+    background-color: #0056b3;
+}
+
+.arah{
+    display: flex;
+    gap: 10px;
+}

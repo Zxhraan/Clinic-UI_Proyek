@@ -1,0 +1,199 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url("../imgrs/IMG_0419-3.jpg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.wrapper {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  width: 100%;
+  color: #fff;
+}
+
+.row {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.row input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none; /* Remove default input focus outline */
+}
+
+.row input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.row input:focus {
+  border-color: #34c759; /* Highlight border color on focus */
+}
+
+.row i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 20px;
+  pointer-events: none; /* Prevent interaction with icon */
+}
+
+.row input:focus + i {
+  color: #34c759;
+}
+
+.pass {
+  text-align: right;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.pass a {
+  color: #34c759;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pass a:hover {
+  color: #fff;
+}
+
+.button {
+  text-align: center;
+  width: 56%;
+  margin-left: -2%;
+}
+
+.button input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #34c759, #28a745);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button input:hover {
+  background: linear-gradient(90deg, #28a745, #34c759);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(52, 199, 89, 0.7);
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.signup-link a {
+  color: #34c759;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #fff;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.row {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.button, .signup-link {
+  animation: slideInRight 0.5s ease-in-out;
+}

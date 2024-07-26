@@ -1,0 +1,78 @@
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Background color for container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font size */
+    color: #333; /* Darker text color */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-size: 1.2rem; /* Larger font size */
+}
+
+/* Grand total styling */
+.grand-total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+    color: #007bff; /* Accent color */
+}
+
+/* Empty cart message */
+.cart-empty {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    display: none;
+}
+
+/* Animation and Transition */
+.container, h1, table {
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Scale up on hover */
+}
+
+table th, table td {
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+table th:hover, table td:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+

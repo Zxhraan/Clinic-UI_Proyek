@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#loading-screen {
+  text-align: center;
+}
+
+.hospital-logo {
+  width: 300px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+  height: 150px;
+  margin-bottom: 20px; /* Jarak antara logo dengan elemen lainnya */
+}
+
+
+#main-content {
+  max-width: 800px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: -15%;
+}
+
+
+/* CSS untuk animasi transisi */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#loading-screen {
+  text-align: center;
+  animation: fadeOut 5s forwards; /* Animasi menghilangkan loading screen */
+}
+
+#main-content {
+  display: none; /* Awalnya disembunyikan */
+  max-width: 800px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 5s forwards; /* Animasi menampilkan main content */
+}
+

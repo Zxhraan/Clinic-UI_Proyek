@@ -1,0 +1,35 @@
+/* CSSSS/cart.css */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-quantity {
+    width: 50px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
